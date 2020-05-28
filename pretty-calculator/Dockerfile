@@ -31,6 +31,6 @@ COPY . .
 
 
 ## Your app binds to port 8080 so you'll use the EXPOSE instruction to have it mapped by the docker daemon:
-## EXPOSE 5010
+EXPOSE 3000
 
 CMD [ "yarn", "start" ]
