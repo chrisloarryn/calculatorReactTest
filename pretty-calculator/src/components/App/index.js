@@ -12,6 +12,8 @@ const App = ({ initialValue }) => {
    = myDate => {
       return moment(myDate.format('hh:mm'))
     } */
+
+  // eslint-disable-next-line
   const [time, setTime] = useState(new Date())
   const [value, setValue] = useState(initialValue)
   const [memory, setMemory] = useState(null)
@@ -43,17 +45,14 @@ const App = ({ initialValue }) => {
     // operators
     if (content === '+') {
       if (operator !== null) {
-        if (content === '+') {
+        if (operator === '+') {
           setMemory(memory + parseFloat(value))
-        }
-        if (content === '−') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '×') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '÷') {
-          setMemory(memory + parseFloat(value))
+        } else if (operator === '−') {
+          setMemory(memory - parseFloat(value))
+        } else if (operator === '×') {
+          setMemory(memory * parseFloat(value))
+        } else if (operator === '÷') {
+          setMemory(memory / parseFloat(value))
         }
       } else {
         setMemory(parseFloat(value))
@@ -64,17 +63,14 @@ const App = ({ initialValue }) => {
     }
     if (content === '−') {
       if (operator !== null) {
-        if (content === '+') {
+        if (operator === '+') {
           setMemory(memory + parseFloat(value))
-        }
-        if (content === '−') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '×') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '÷') {
-          setMemory(memory + parseFloat(value))
+        } else if (operator === '−') {
+          setMemory(memory - parseFloat(value))
+        } else if (operator === '×') {
+          setMemory(memory * parseFloat(value))
+        } else if (operator === '÷') {
+          setMemory(memory / parseFloat(value))
         }
       } else {
         setMemory(parseFloat(value))
@@ -85,17 +81,14 @@ const App = ({ initialValue }) => {
     }
     if (content === '×') {
       if (operator !== null) {
-        if (content === '+') {
+        if (operator === '+') {
           setMemory(memory + parseFloat(value))
-        }
-        if (content === '−') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '×') {
-          setMemory(memory + parseFloat(value))
-        }
-        if (content === '÷') {
-          setMemory(memory + parseFloat(value))
+        } else if (operator === '−') {
+          setMemory(memory - parseFloat(value))
+        } else if (operator === '×') {
+          setMemory(memory * parseFloat(value))
+        } else if (operator === '÷') {
+          setMemory(memory / parseFloat(value))
         }
       } else {
         setMemory(parseFloat(value))
@@ -105,20 +98,34 @@ const App = ({ initialValue }) => {
       return
     }
     if (content === '÷') {
-      setMemory(parseFloat(value))
+      if (operator !== null) {
+        if (operator === '+') {
+          setMemory(memory + parseFloat(value))
+        } else if (operator === '−') {
+          setMemory(memory - parseFloat(value))
+        } else if (operator === '×') {
+          setMemory(memory * parseFloat(value))
+        } else if (operator === '÷') {
+          setMemory(memory / parseFloat(value))
+        }
+      } else {
+        setMemory(parseFloat(value))
+      }
       setValue('0')
       setOperator('÷')
       return
     }
+
     if (content === '=') {
       if (!operator) return
+
       if (operator === '+') {
         setValue((memory + parseFloat(value)).toString())
       } else if (operator === '−') {
         setValue((memory - parseFloat(value)).toString())
       } else if (operator === '×') {
         setValue((memory * parseFloat(value)).toString())
-      } else if (operator === '%') {
+      } else if (operator === '÷') {
         setValue((memory / parseFloat(value)).toString())
       }
       setMemory(null)
