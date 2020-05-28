@@ -12,14 +12,14 @@
 FROM node:10
 
 # Create app directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 ## --chown=msi:docker
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY package*.json ./
+COPY package.json /usr/src/app
 
 RUN yarn install
 # If you are building your code for production
@@ -27,8 +27,8 @@ RUN yarn install
 ## docker build -t Documents/node/app .
 
 # Bundle app source
-COPY . .
-
+## COPY . .
+COPY . /usr/src/app
 
 ## Your app binds to port 8080 so you'll use the EXPOSE instruction to have it mapped by the docker daemon:
 EXPOSE 3000
