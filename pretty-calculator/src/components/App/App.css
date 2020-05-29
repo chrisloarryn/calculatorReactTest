@@ -1,34 +1,32 @@
 .App {
-    min-width: 415px;
-    width: auto;
-    min-height: 1100px;
-    height: auto;
-    background-color: #000000;
-    color: #ffffff;
+    background: black;
     border-radius: 50px;
+    color: white;
+    height: 1218px;
     padding: 20px;
     position: relative;
+    width: 563px;
 }
 
 .top {
-    justify-content: space-between;
-    height: 115px;
-    padding: 0 20px;
     display: flex;
+    height: 250px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .display {
-    font-size: 100px;
-    margin-bottom: 20px;
+    font-size: 130px;
     font-weight: 300;
+    margin-bottom: 20px;
     text-align: right;
 }
 
 .buttons {
     display: grid;
     grid-gap: 20px;
-    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .bottom {
@@ -39,5 +37,5 @@
     bottom: 10px;
     left: 50%;
     border-radius: 4px;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
 }
