@@ -1,3 +1,10 @@
+This project is runing on this ip: [18.223.131.105](http://calculator.sytes.net/)
+with this dns link, [http://calculator.sytes.net/](http://calculator.sytes.net/)
+
+the project is running in a Docker container on AWS EC2 instance, with nginx to serve static files.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
