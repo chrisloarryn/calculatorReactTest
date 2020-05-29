@@ -5,10 +5,10 @@
     cursor: pointer;
     display: flex;
     font-size: 35px;
-    height: 60px;
-    min-height: 9vh;
+    height: 70px;
+    min-height: auto;
     justify-content: center;
-    min-width: 4vw;
+    min-width: auto;
     width: auto;
     transition: filter 0.3s ease-in;
 }
