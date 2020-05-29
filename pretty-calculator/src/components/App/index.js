@@ -8,11 +8,6 @@ import './App.css'
 
 const App = ({ initialValue }) => {
   // moment(new Date().format('hh:mm'))
-  /**
-   = myDate => {
-      return moment(myDate.format('hh:mm'))
-    } */
-
   // eslint-disable-next-line
   const [time, setTime] = useState(new Date())
   const [value, setValue] = useState(initialValue)
@@ -21,8 +16,8 @@ const App = ({ initialValue }) => {
 
   useEffect(() => {
     setInterval(() => {
-        setTime(new Date())
-    },5000)
+      setTime(new Date())
+    }, 5000)
   }, [time])
 
   const handleButtonPress = content => () => {
