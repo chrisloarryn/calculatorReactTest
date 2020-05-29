@@ -1,7 +1,19 @@
+## This Project
+
 This project is runing on this ip: [18.223.131.105](http://18.223.131.105)
 with this dns link, [http://calculator.sytes.net/](http://calculator.sytes.net/)
 
 the project is running in a Docker container on AWS EC2 instance, with nginx to serve static files.
+
+
+## Used commands
+
+Run the following command to build & tag the image.
+`docker build -f Dockerfile.prod -t my-first-image:latest .`
+
+The final step is to run your image (as a container)
+`docker run -it -p 80:80 --rm my-first-image:latest`
+
 
 
 
