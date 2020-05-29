@@ -4,11 +4,11 @@
     border-radius: 50%;
     cursor: pointer;
     display: flex;
-    font-size: 45px;
-    height: 90px;
-    min-height: 10vh;
+    font-size: 35px;
+    height: 60px;
+    min-height: 9vh;
     justify-content: center;
-    min-width: 5vw;
+    min-width: 4vw;
     width: auto;
     transition: filter 0.3s ease-in;
 }
@@ -33,5 +33,5 @@
 }
 
 .Button.operator {
-    background: #f1a33c;
+    background: tomato;
 }
