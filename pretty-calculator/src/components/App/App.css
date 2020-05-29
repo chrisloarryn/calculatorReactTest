@@ -2,16 +2,16 @@
     background: black;
     border-radius: 50px;
     color: white;
-    min-height: 820px;
+    min-height: 800px;
     height: auto;
     padding: 20px;
     position: relative;
-    width: 463px;
+    width: 433px;
 }
 
 .top {
     display: flex;
-    height: 150px;
+    height: 135px;
     justify-content: space-between;
     padding: 0 20px;
 }
