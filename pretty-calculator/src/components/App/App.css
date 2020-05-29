@@ -2,21 +2,22 @@
     background: black;
     border-radius: 50px;
     color: white;
-    height: 1218px;
+    min-height: 820px;
+    height: auto;
     padding: 20px;
     position: relative;
-    width: 563px;
+    width: 463px;
 }
 
 .top {
     display: flex;
-    height: 250px;
+    height: 150px;
     justify-content: space-between;
     padding: 0 20px;
 }
 
 .display {
-    font-size: 130px;
+    font-size: 90px;
     font-weight: 300;
     margin-bottom: 20px;
     text-align: right;
