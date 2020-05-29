@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import menu from './../../assets/menu.png'
 
 import Button from '../Button'
@@ -18,6 +18,12 @@ const App = ({ initialValue }) => {
   const [value, setValue] = useState(initialValue)
   const [memory, setMemory] = useState(null)
   const [operator, setOperator] = useState(null)
+
+  useEffect(() => {
+    setInterval(() => {
+        setTime(new Date())
+    },5000)
+  }, [time])
 
   const handleButtonPress = content => () => {
     const num = parseFloat(value)

@@ -1,7 +1,8 @@
 .Button {
   background: #333;
-  width: 110px;
-  height: 110px;
+  width: auto;
+  min-height: 72px;
+  height: auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .Button.zero {
-  width: 250px;
+  width: auto;
   grid-column: 1 / span 2;
   border-radius: 57.5px;
   position: relative;

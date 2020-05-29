@@ -1,6 +1,8 @@
 .App {
-    width: 563px;
-    height: 1218px;
+    min-width: 415px;
+    width: auto;
+    min-height: 800px;
+    height: auto;
     background-color: #000000;
     color: #ffffff;
     border-radius: 50px;
@@ -9,14 +11,14 @@
 }
 
 .top {
-    justify-content: space;
-    height: 250px;
+    justify-content: space-between;
+    height: 115px;
     padding: 0 20px;
     display: flex;
 }
 
 .display {
-    font-size: 130px;
+    font-size: 100px;
     margin-bottom: 20px;
     font-weight: 300;
     text-align: right;
